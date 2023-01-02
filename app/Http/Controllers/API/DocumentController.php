@@ -148,7 +148,7 @@ class DocumentController extends ApiController
 
         $archivosAEliminar = [];
         //Recorrer a todos los usuarios que son choferes para obtener sus documentos
-        $users = User::select('idUser')->where('rol', 'chofer')->get();
+        $users = User::select('idUser', 'verVideo', 'contestarQuiz', 'subirDocs')->where('rol', 'chofer')->get();
         foreach ($users as $key => $value) {
             //Obtener el documento cuyo ID es el que se quiere eliminar de cada usuario
             $doc = User::find($value['idUser'])->documents()->where('user_document.idDocs', $idDoc)->first();
@@ -187,10 +187,11 @@ class DocumentController extends ApiController
                 }
             }
             if($banDocumentos) {
-                $usuario = User::findOrFail($user['idUser']);
-                $usuario->estatus = 'activo';
-                $usuario->subirDocs = true;
-                $usuario->save();
+                if($user['verVideo'] === 1 && $user['contestarQuiz'] === 1) {
+                    User::where('idUser', $user['idUser'])->update(['estatus' => 'activo', 'subirDocs' => true]);
+                } else {
+                    User::where('idUser', $user['idUser'])->update(['estatus' => 'incompleto', 'subirDocs' => true]);
+                }
             }
         }
 
