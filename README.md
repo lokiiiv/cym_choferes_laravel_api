@@ -16,7 +16,7 @@ Procedimiento:
 5. Para que funcione correctamente la aplicación laravel, es necesario ingresar el comando: php artisan key:generate. Este paso es muy importante.
 6. Ahora es necesario ejecutar el comando: php artisan jwt:secret, esto con la finalidad de que las funcionalidades de la libreria de JWT Token funcionen correctamente.
 
-Aspectos importantes:
+Aspectos importantes.
 Para que la aplicación funciones correctamente y otros clientes puedan conectarse a ella, es necesario saber la dirección IP del dispositivo donde esta corriendo la aplicación Laravel, puede obtenerse con el comando ipconfig en caso de Windows o ifconfig en caso de Linux, teniendo esta información, es necesario incluir esta dirección en el archivo .env con el puerto 8000, especificamente en la variable de "APP_URL", quedando al final por ejemplo: APP_URL=http://192.168.0.8:8000. Esto es necesario cambiarlo en caso de la direccion IP del servidor cambie debido a que se desconecto o se cambio de red.
 
 Ejecutar la aplicación:
