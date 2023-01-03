@@ -6,6 +6,7 @@ Para ejecutar la API de manera local es necesario tener instalado los siguientes
 - XAMPP: especificante con la versión 7.4 de PHP para evitar errores de compatibilidad. Link de descarga: https://versaweb.dl.sourceforge.net/project/xampp/XAMPP%20Windows/7.4.3/xampp-windows-x64-7.4.3-0-VC15-installer.exe
 - Composer: luego de instalar XAMPP es muy importante instalar Composer para completar los paquetes o referencias que hagan falta al momento de clonar el proyecto. Link de descarga: https://getcomposer.org/download/
 - Git: es necesario para clonar el proyecto y descargarlo de forma local en el equipo. Link de descarga: https://git-scm.com/downloads
+- Un editor de código, por ejemplo, Visual Studio Code: https://code.visualstudio.com/ (es recomendable instalar extensiones para PHP en VS Code para tener una mejor experencia al desarrollar).
 
 Procedimiento:
 1. Una vez instalados los programas, es necesario acceder a la carpeta htdocs que XAMPP instala en la raiz del disco local y abrir la terminal, o bien abrir primero la terminal y dirigirese a la ruta de htdocs de XAMPP. Ejemplo: C:\xampp\htdocs
